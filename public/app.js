@@ -67,5 +67,10 @@
 let currentPlayer = 'X';
 let gameOver = false;
 function makeMove(cell){
-    if(cell.innerHTML == "&&"!)
+    if(cell.innerHTML == '' && !gameOver){
+        cell.innerHTML = currentPlayer;
+        checkWinner();
+        currentPlayer = currentPlayer == 'X' ?'O':'X';\
+        document.querySelector
+    }
 }
