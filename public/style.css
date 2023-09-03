@@ -49,10 +49,11 @@ body {
     max-width: 200px;
     margin: 10px auto;
     padding: 10px;
+    text-align: center;
   }
 
   .result{
-    color: #fff;
+    color: #000000;
     font-size: 25px;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
   }
