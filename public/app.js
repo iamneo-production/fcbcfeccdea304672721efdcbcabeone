@@ -25,10 +25,12 @@ const ticTacToe = (element, index) => {
             disableButtons();
         }
         else {
-            currentPlayer = currentPlayer =='X'
-            document.querySelector
+            currentPlayer = currentPlayer =='X'?'O':'X';
+            document.querySelector('.result').textContent=`Player ${currentPlayer} Turn`;
         }
+    }
 }
+
 //     // Your game logic here
 
 //     /*
@@ -60,7 +62,19 @@ const ticTacToe = (element, index) => {
 //     */
 
 // // Function to reset the game
-// const resetGame = () => {
+const resetGame = () => {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell=>{
+        cell.innerHTML='';
+        cell.removeAttribute('disabled');
+    });
+    currentPlayer = 'X';
+    gameOver = false;
+    document.querySelector('.result').textContent=`Player ${currentPlayer} Turn`;
+};
+function disableButtons(){
+    const cells =
+}
 //     // Your code to reset the game state
 //     // ...
 
