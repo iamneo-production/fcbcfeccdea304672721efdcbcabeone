@@ -71,6 +71,15 @@ function makeMove(cell){
         cell.innerHTML = currentPlayer;
         checkWinner();
         currentPlayer = currentPlayer == 'X' ?'O':'X';\
-        document.querySelector
+        document.querySelectorAll('.result').textContent = `Player${currentPlayer}'s turn`;
     }
 }
+
+function checkWinner(){
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell=>){
+        cell.innerHTML='';
+    };
+    
+}
+
