@@ -8,5 +8,28 @@ body {
     background-position: center center;
     font-family: "Radio Canada", sans-serif;
   }
-  
+
+  h1{
+    color:#fff;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgb(0,0,0.5);
+  }
+
+  .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+  }
+
+  .cell{
+    width: 75px;
+    height: 75px;
+    border: 
+  }
 /* Enter your styling here */
