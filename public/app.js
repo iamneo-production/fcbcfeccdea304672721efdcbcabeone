@@ -58,11 +58,11 @@
 //     // ...
 // };
 
-// btns.forEach((btn, i) => {
-//     btn.addEventListener('click', () => ticTacToe(btn, i));
-// });
+btns.forEach((btn, i) => {
+   btn.addEventListener('click', () => ticTacToe(btn, i));
+});
 
-// document.querySelector('#reset').addEventListener('click', resetGame);
+document.querySelector('#reset').addEventListener('click', resetGame);
 
 let currentPlayer = 'X';
 let gameOver = false;
@@ -71,7 +71,7 @@ function makeMove(cell){
         cell.innerHTML = currentPlayer;
         checkWinner();
         currentPlayer = currentPlayer == 'X' ?'O':'X';
-        document.querySelectorAll('.result').textContent = `Player${currentPlayer}'s turn`;
+        document.querySelectorAll('.result').textContent = `Player ${currentPlayer} Turn`;
     }
 }
 
@@ -82,6 +82,9 @@ function checkWinner(){
     });
     currentPlayer ='X';
     gameOver = false;
-    document.querySelector('.result').textContent=`Player${currentPlayer}'s turn`;
+    document.querySelector('.result').textContent=`Player ${currentPlayer} Turn`;
 }
 
+btns.forEach((btn, i) => {
+       btn.addEventListener('click', () => ticTacToe(btn, i));
+})
