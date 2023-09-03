@@ -73,7 +73,10 @@ const resetGame = () => {
     document.querySelector('.result').textContent=`Player ${currentPlayer} Turn`;
 };
 function disableButtons(){
-    const cells =
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell =>{
+        cell.setAttribute('disabled','disabled');
+    });
 }
 //     // Your code to reset the game state
 //     // ...
@@ -86,7 +89,7 @@ function disableButtons(){
 // };
 
 
-btns.forEach((btn, i) => {
-    btn.addEventListener('click', () => ticTacToe(btn, i));
-})
+// btns.forEach((btn, i) => {
+//     btn.addEventListener('click', () => ticTacToe(btn, i));
+// })
 
