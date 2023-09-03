@@ -13,9 +13,22 @@ let conditions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+let gameOver = false;
 
 // // Function to handle player moves
-// const ticTacToe = (element, index) => {
+const ticTacToe = (element, index) => {
+    if(element.innerHTML == '' && !gameOver){
+        element.innerHTML = currentPlayerl
+        if(checkWinner()){
+            document.querySelector('.result').textContent=`Player ${currentPlayer} wins!`;
+            gameOver=true;
+            disableButtons();
+        }
+        else {
+            currentPlayer = currentPlayer =='X'
+            document.querySelector
+        }
+}
 //     // Your game logic here
 
 //     /*
@@ -57,46 +70,9 @@ let conditions = [
 //     // Your code to re-enable buttons
 //     // ...
 // };
-let gameOver = false;
-function makeMove(cell){
-    if(cell.innerHTML == '' && !gameOver){
-        cell.innerHTML = currentPlayer;
-    });
-                currentPlayer ='X';
-                    gameOver = false;
-                        document.querySelector('.result').textContent=`Player ${currentPlayer} Turn`;
-                        }
 
-                        btns.forEach((btn, i) => {
-                               btn.addEventListener('click', () => ticTacToe(btn, i));
-                               })
 
 btns.forEach((btn, i) => {
-   btn.addEventListener('click', () => ticTacToe(btn, i));
-});
-
-document.querySelector('#reset').addEventListener('click', resetGame);
-
-let gameOver = false;
-function makeMove(cell){
-    if(cell.innerHTML == '' && !gameOver){
-        cell.innerHTML = currentPlayer;
-        checkWinner();
-        currentPlayer = currentPlayer == 'X' ?'O':'X';
-        document.querySelectorAll('.result').textContent = `Player ${currentPlayer} Turn`;
-    }
-}
-
-function checkWinner(){
-    const cells = document.querySelectorAll('.cell');
-    cells.forEach(cell=>{
-        cell.innerHTML='';
-    });
-    currentPlayer ='X';
-    gameOver = false;
-    document.querySelector('.result').textContent=`Player ${currentPlayer} Turn`;
-}
-
-btns.forEach((btn, i) => {
-       btn.addEventListener('click', () => ticTacToe(btn, i));
+    btn.addEventListener('click', () => ticTacToe(btn, i));
 })
+
