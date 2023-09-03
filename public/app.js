@@ -70,16 +70,18 @@ function makeMove(cell){
     if(cell.innerHTML == '' && !gameOver){
         cell.innerHTML = currentPlayer;
         checkWinner();
-        currentPlayer = currentPlayer == 'X' ?'O':'X';\
+        currentPlayer = currentPlayer == 'X' ?'O':'X';
         document.querySelectorAll('.result').textContent = `Player${currentPlayer}'s turn`;
     }
 }
 
 function checkWinner(){
     const cells = document.querySelectorAll('.cell');
-    cells.forEach(cell=>){
+    cells.forEach(cell=>{
         cell.innerHTML='';
-    };
-    
+    });
+    currentPlayer ='X';
+    gameOver = false;
+    document.querySelector('.result').textContent=`Player${currentPlayer}'s turn`;
 }
 
