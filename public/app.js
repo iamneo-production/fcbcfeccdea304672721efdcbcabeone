@@ -34,6 +34,7 @@ const ticTacToe = (element, index) => {
 
     // Your code to handle button and cell interactions
     // ...
+    
 };
 
     /*
