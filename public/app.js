@@ -1,18 +1,18 @@
 // // Initial game state
-// let cells = ['', '', '', '', '', '', '', '', ''];
-// let currentPlayer = 'X';
-// let result = document.querySelector('.result');
-// let btns = document.querySelectorAll('.btn');
-// let conditions = [
-//     [0, 1, 2],
-//     [3, 4, 5],
-//     [6, 7, 8],
-//     [0, 3, 6],
-//     [1, 4, 7],
-//     [2, 5, 8],
-//     [0, 4, 8],
-//     [2, 4, 6]
-// ];
+let cells = ['', '', '', '', '', '', '', '', ''];
+let currentPlayer = 'X';
+let result = document.querySelector('.result');
+let btns = document.querySelectorAll('.btn');
+let conditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
 
 // // Function to handle player moves
 // const ticTacToe = (element, index) => {
@@ -57,6 +57,19 @@
 //     // Your code to re-enable buttons
 //     // ...
 // };
+let gameOver = false;
+function makeMove(cell){
+    if(cell.innerHTML == '' && !gameOver){
+        cell.innerHTML = currentPlayer;
+    });
+                currentPlayer ='X';
+                    gameOver = false;
+                        document.querySelector('.result').textContent=`Player ${currentPlayer} Turn`;
+                        }
+
+                        btns.forEach((btn, i) => {
+                               btn.addEventListener('click', () => ticTacToe(btn, i));
+                               })
 
 btns.forEach((btn, i) => {
    btn.addEventListener('click', () => ticTacToe(btn, i));
@@ -64,7 +77,6 @@ btns.forEach((btn, i) => {
 
 document.querySelector('#reset').addEventListener('click', resetGame);
 
-let currentPlayer = 'X';
 let gameOver = false;
 function makeMove(cell){
     if(cell.innerHTML == '' && !gameOver){
